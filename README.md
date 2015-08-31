@@ -1,5 +1,16 @@
-cfs:autoform
+loredanacirstea:cfs-autoform-semantic-ui
 =========================
+
+
+Forked from https://github.com/aldeed/meteor-cfs-autoform to support Semantic UI instead of Bootstrap3.
+
+To ensure this, have `fabienb4:autoform-semantic-ui` installed and on client startup:
+
+```
+Meteor.startup(function() {
+  AutoForm.setDefaultTemplate("semanticUI");
+});
+```
 
 A smart package for Meteor that provides a file UI component for use within an autoform. The UI component supports clicking to select files or dropping them. Once the full form is valid, the files are uploaded using CollectionFS. The form document is inserted only if the uploads are all successful. If the form document fails to insert on the server, the uploaded files are removed.
 

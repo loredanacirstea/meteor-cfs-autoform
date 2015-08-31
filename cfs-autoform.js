@@ -52,19 +52,19 @@ if (Meteor.isClient) {
     return {'data-schema-key': this.atts["data-schema-key"]};
   }
 
-  Template.cfsFileField_bootstrap3.helpers({
+  Template.cfsFileField_semanticUI.helpers({
     textInputAtts: textInputAtts,
     fileInputAtts: fileInputAtts
   });
 
-  Template.cfsFilesField_bootstrap3.helpers({
+  Template.cfsFilesField_semanticUI.helpers({
     textInputAtts: textInputAtts,
     fileInputAtts: fileInputAtts
   });
 
   var hookTracking = {};
-  Template.cfsFileField_bootstrap3.rendered =
-  Template.cfsFilesField_bootstrap3.rendered = function () {
+  Template.cfsFileField_semanticUI.rendered =
+  Template.cfsFilesField_semanticUI.rendered = function () {
     var formId;
 
     // backwards compatibility with pre 5.0 autoform
@@ -93,7 +93,7 @@ if (Meteor.isClient) {
     template.$('.cfsaf-hidden').data("cfsaf_files", fileList);
   };
 
-  Template.cfsFileField_bootstrap3.events({
+  Template.cfsFileField_semanticUI.events({
     'click .cfsaf-field': function (event, template) {
       template.$('.cfsaf-hidden').click();
     },
@@ -122,7 +122,7 @@ if (Meteor.isClient) {
     template.$('.cfsaf-field').val(fullNameList.join(", "));
   };
 
-  Template.cfsFilesField_bootstrap3.events({
+  Template.cfsFilesField_semanticUI.events({
     'click .cfsaf-field': function (event, template) {
       template.$('.cfsaf-hidden').click();
     },
